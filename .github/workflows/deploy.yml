@@ -57,7 +57,7 @@ jobs:
           echo "Esperando que la aplicación responda..."
 
           for i in {1..30}; do
-            if curl --fail --silent http://localhost:8080/health | grep -qx "ok"; then
+            if curl --fail --silent http://localhost:8080/health-error | grep -qx "ok"; then
               echo "Smoke test exitoso"
               exit 0
             fi
